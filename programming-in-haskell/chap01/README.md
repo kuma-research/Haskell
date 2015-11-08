@@ -15,7 +15,7 @@ In this chapter, the author simply reviews the basic principles of functional pr
 4. It could be revised as:
   
         qsort [] = []
-        qsort (x:xs)  = qsort larger ++ [x] ++ smaller
+        qsort (x:xs)  = qsort larger ++ [x] ++ qsort smaller
                         where 
                           larger  = [a | a <- xs, a >= x]
                           smaller = [b | b <- xs, b <  x] 
